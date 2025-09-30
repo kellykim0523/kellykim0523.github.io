@@ -42,15 +42,12 @@ p {
   height: 424px;
   background: lightgray;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  overflow: hidden;
-  transition: 0.3s;
 }
 
 .card span {
   position: absolute;
   font-size: 60px;
   font-weight: bold;
-  transition: all 0.6s ease;
 }
 
 .pink   { background: #FF25BD; }

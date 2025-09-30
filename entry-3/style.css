@@ -41,6 +41,7 @@ p {
   width: 411px;
   height: 424px;
   background: lightgray;
+  border-radius: 22px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 

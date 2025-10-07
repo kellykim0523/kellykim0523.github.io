@@ -1,0 +1,117 @@
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: white;
+}
+
+.title-area {
+  text-align: center;
+  position: relative;
+  margin-top: 80px;
+}
+
+.title {
+    font-family: "Climate Crisis", sans-serif;
+    font-weight: 400px;
+    font-size: 200px;
+    font-style: normal;
+    font-variation-settings: "YEAR" 1986;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1;
+    color: black;
+}
+
+.exp-wrap {
+  position: relative;
+}
+
+
+.exp {
+  position: absolute;
+  color: #FF25BD;
+  margin-bottom: 30px;
+}
+
+.exp:nth-child(1){ top: -650px; left: 1100px; }     
+.exp:nth-child(2){ top: -600px; left: 1350px; }       
+.exp:nth-child(3){ top: -320px; left: 200px; }      
+.exp:nth-child(4){ top: -100px; left: 650px; }      
+.exp:nth-child(5){ top: -50px; left: 400px; }      
+.exp:nth-child(6){ top: 0px; left: 900px; }
+
+
+.title-area:hover .title {
+  color: magenta;
+}
+.title-area:hover .exp {
+  color: black;
+}
+
+
+.pocket-track {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.2rem;
+  margin-top: 160px;
+  position: relative;
+}
+
+
+.pocket {
+  border-radius: 22px;
+  display: border;
+  padding: 10px;
+  font-weight: 600;
+  color: black;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+
+.p1 {
+    background: #FF25BD;
+    width:293px;
+    height:302px;
+}
+.p2 {
+    background: #FFDD00;
+    width:513px;
+    height:529px;
+}
+
+.p3 {
+    background: #258EFF;
+    width:411px;
+    height:424px;
+}
+
+.p4 {
+    background: #C925FF;
+    width:300px;
+    height:310px;
+}
+.p5 {
+    background: #FF2525;
+    width:252px;
+    height:260px;
+}
+.p6 {
+    background: #8EFF25;
+    width:429px;
+    height:443px;
+}
+
+
+
+.pocket-track:hover .pocket:not(:hover) {
+  opacity: 0.7;
+}
+
+
+.pocket span {
+  transition: transform 0.3s ease;
+}
+

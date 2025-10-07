@@ -5,6 +5,11 @@ body {
   background: white;
 }
 
+.page{
+    width: 1440px;
+    height: 1764px;
+}
+
 .title-area {
   text-align: center;
   position: relative;
@@ -49,14 +54,22 @@ body {
   color: black;
 }
 
-
+/*i asked chatgpt about flex, justify-content, and align-items*/
 .pocket-track {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 1.2rem;
-  margin-top: 160px;
+  
+  margin-top: 0px;
   position: relative;
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1;
+    color: black;
 }
 
 
@@ -67,7 +80,7 @@ body {
   font-weight: 600;
   color: black;
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  position: relative;
+  position: absolute;
 }
 
 
@@ -75,33 +88,47 @@ body {
     background: #FF25BD;
     width:293px;
     height:302px;
+    left: 85px;
+    top: 971px;
 }
 .p2 {
     background: #FFDD00;
     width:513px;
     height:529px;
+    left: 230px;
+    top: 827px;
 }
 
 .p3 {
     background: #258EFF;
     width:411px;
     height:424px;
+    left: 493px;
+    top: 880px;
 }
 
 .p4 {
     background: #C925FF;
     width:300px;
     height:310px;
+    left: 773px;
+    top: 1036px;
 }
 .p5 {
-    background: #FF2525;
-    width:252px;
-    height:260px;
-}
-.p6 {
     background: #8EFF25;
     width:429px;
     height:443px;
+    left: 952px;
+    top: 1122px;
+}
+.p6 {
+    background: #FF2525;
+    width:429px;
+    height:443px;
+    width:252px;
+    height:260px;
+    left: 893px;
+    top: 1420px;
 }
 
 

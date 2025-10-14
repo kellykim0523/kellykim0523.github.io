@@ -1,0 +1,190 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  width: 100%;
+  overflow: visible; 
+}
+
+.canvas {
+  position: relative;
+  width: 1440px;    
+  height: 1800px;    
+  margin: 0 auto;
+  background: black;
+}
+
+/* i asked motion code to chatgpt */
+body:hover .word {
+  animation: centerAfterHover 1.2s ease-in-out 1.5s forwards;
+}
+@keyframes centerAfterHover {
+  to {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+.gummy {
+  position: absolute;
+  top: 30px;
+  left: 150px;
+  color: #FF00B2;
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 600;
+  font-size: 360px;
+  line-height: 0.95;
+  letter-spacing: -8px;
+  white-space: nowrap;
+  transition: transform 0.6s cubic-bezier(0.2, 2, 0.3, 1);
+  transform-origin: center;
+}
+.gummy:hover {
+  transform: scaleX(1.45) scaleY(0.75) skewX(-8deg) skewY(2deg);
+}
+
+
+.silky {
+  position: absolute;
+  top: 296px;
+  left: 436px;
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 600;
+  font-size: 360px;
+  line-height: 0.95;
+  letter-spacing: -8px;
+  white-space: nowrap;
+  color: #C925FF;
+  transition: all 0.5s ease;
+  background: none;
+}
+.silky:hover {
+  color: transparent;
+  background: linear-gradient(
+    120deg,
+    #C925FF 0%,
+    #ffffff 20%,
+    #C925FF 40%,
+    #ffffff 60%,
+    #C925FF 80%,
+    #C925FF 100%
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: silkyFlow 2.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px rgba(176, 79, 255, 0.3));
+}
+
+
+.scratch {
+  position: absolute;
+  top: 562px;
+  left: 48px;
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 600;
+  font-size: 360px;
+  line-height: 0.95;
+  letter-spacing: -8px;
+  white-space: nowrap;
+  color: #FF2525;
+  transition: all 0.2s ease;
+  text-shadow: none;
+}
+.scratch:hover {
+  color: #ffffff;
+  animation: scratchShake 0.12s steps(2) infinite,
+             glitchSplit 0.4s ease-in-out 1;
+}
+/* ✴ I ask this motion coding to chatgpt */
+@keyframes scratchShake {
+  0% { transform: translate(0, 0) skewX(0deg); }
+  25% { transform: translate(-3px, 1px) skewX(2deg); }
+  50% { transform: translate(2px, -2px) skewX(-2deg); }
+  75% { transform: translate(-1px, 2px) skewX(1deg); }
+  100% { transform: translate(0, 0) skewX(0deg); }
+}
+
+
+
+.fluffy {
+  position: absolute;
+  top: 828px;
+  left: 880px;
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 600;
+  font-size: 360px;
+  line-height: 0.95;
+  letter-spacing: -8px;
+  white-space: nowrap;
+  color: #258EFF;
+  transition: transform 0.4s cubic-bezier(0.25, 1.3, 0.5, 1);
+  filter: drop-shadow(0 0 0 rgba(51,136,255,0));
+}
+.fluffy:hover {
+  transform: scale(1.9);
+  transition: transform 0.8s cubic-bezier(0.1, 1.8, 0.3, 1);
+}
+
+
+
+.rigid {
+  position: absolute;
+  top: 1095px;
+  left: 72px;
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 700;
+  font-size: 360px;
+  line-height: 0.95;
+  letter-spacing: -8px;
+  white-space: nowrap;
+  color: #FFDD00;
+  transition: transform 0.15s ease-out;
+  transform-origin: center;
+}
+.rigid:hover {
+  transform: scaleX(0.6) scaleY(1.4) skewX(-8deg);
+  transition: transform 0.1s cubic-bezier(0.4, 0.1, 0.7, 1.8);
+}
+
+
+
+.glossy {
+  position: absolute;
+  top: 1361px;
+  left: 621px;
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 600;
+  font-size: 360px;
+  line-height: 0.95;
+  letter-spacing: -8px;
+  white-space: nowrap;
+  color: #66ff55;
+  transition: color 1.5s ease, filter 1.8s ease;
+  filter: blur(0px) brightness(1) contrast(1);
+}
+.glossy:hover {
+  color: #aaffaa;
+  filter: blur(4px) brightness(1.4) contrast(1.1);
+  transition: color 1.8s ease, filter 2s ease;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 8px; 
+  }
+  body {
+    background-color: black;
+  }
+  .canvas {
+    transform: scale(0.45);
+    transform-origin: top center;
+  }
+  .word {
+    line-height: 1;
+    letter-spacing: -4px;
+  }
+}

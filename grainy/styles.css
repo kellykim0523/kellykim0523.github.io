@@ -1,0 +1,37 @@
+/* 전체 레이아웃 */
+body.grainy-page {
+  background: #000;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* 글자 스타일 */
+.grainy-word {
+  color: #fff;
+  font-family: "Climate Crisis", sans-serif;
+  font-size: 350px;
+  font-weight: 400;
+  letter-spacing: -5px;
+  position: relative;
+  transition: filter 0.5s ease-in-out, transform 0.5s ease;
+  cursor: default;
+}
+
+/* hover시 모자이크 효과 */
+/* i asked chatgpt about mosaic effect, but i don't like it... */
+.grainy-word:hover {
+  transform: scale(1.05);
+  filter: contrast(180%) brightness(130%) saturate(140%)
+          url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg'>\
+<filter id='grain'>\
+  <feTurbulence type='fractalNoise' baseFrequency='2.5' numOctaves='3' result='noise'/>\
+  <feColorMatrix type='saturate' values='0'/>\
+  <feBlend in='SourceGraphic' in2='noise' mode='multiply'/>\
+</filter>\
+</svg>#grain");
+}

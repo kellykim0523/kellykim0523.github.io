@@ -1,0 +1,88 @@
+/* 전체 레이아웃 */
+body{
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+  margin: 0;
+  box-sizing: border-box
+}
+
+/* 제목 및 부제목 */
+h1{
+  font-family: "Climate Crisis", sans-serif;
+  font-weight: 400px;
+  font-size: 200px;
+  font-style: normal;
+  font-variation-settings: "YEAR" 1986;
+  text-align: center;
+  letter-spacing: 2px;
+  z-index: 10;
+  position: relative;
+  color: #000;
+  line-height: 101.013%;
+}
+
+p.sub{
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  color: #F0A;
+  font-family: "ITC Avant Garde Gothic Pro";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 117%;
+  letter-spacing: -2.16px;
+}
+
+/* 공 공통 스타일 */
+.ball {
+  position: absolute;
+  display: flex;
+  color: #000;
+  text-align: center;
+  font-family: "ITC Avant Garde Gothic Pro";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 101.013%; 
+  letter-spacing: -1.2px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  justify-content: center; 
+  align-items: center; 
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+/* hover시 그림자+글자색+살짝 커짐 */
+.ball:hover {
+  box-shadow: 0 0 50px rgb(255, 0, 119);
+  color: rgb(246, 255, 0);
+  transform: scale(1.05);
+}
+
+/* 개별 색상 및 위치 */
+.gummy { border-radius: 676px; background: #0AF; width: 676px; height: 676px;  left: 88px; top: 359px;}
+.rigid { width: 388px; height: 388px;  border-radius: 388px; background: #FF25BD; left: 126px; top: 1173px; }
+.fluffy { z-index: 10;width: 236px; height: 236px;  background-color: #BF00FF; border-radius: 50%; left: 786px; top: 783px;}
+.grainy { width: 472px; height: 472px; border-radius: 596px; background: #FD0; left: 786px; top: 1037px; }
+.glossy { width: 470px; height: 470px; border-radius: 470px; background: #F00; left: 474px; top: 814px; }
+.playground { width: 295px; height: 295px; border-radius: 295px; background: #7BFF00; left: 1017px; top: 628px;}
+
+/* 둥둥 애니메이션 프레임 */
+@keyframes ballY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-40px);
+  }
+  70% {
+    transform: translateY(100px);
+  }
+}
+
+/* 둥둥 애니메이션 적용 */
+.ball {
+  animation: ballY 3s ease-in-out infinite;
+}

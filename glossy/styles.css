@@ -1,0 +1,47 @@
+/* 전체 레이아웃 */
+body{
+  font-family: "Poppins", sans-serif;
+  background: #FF0000;
+  margin: 0;
+  box-sizing: border-box
+}
+
+/* 단어 전체 */
+.glossy-word {
+  display: flex;
+  gap: 18px;
+  flex-shrink: 0;
+  width: 380px;
+  height: 236px;
+}
+
+/* 글자 기본 스타일 */
+.glossy-word span {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: "Climate Crisis";
+  font-size: 400px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 101.013%;
+  position: absolute;
+}
+
+/* 개별 색상 및 위치 */
+.g { left: 1013px;  top: 31px; }
+.l { left: 762px; top: 464px; }
+.o { left: 355px; top: 730px; }
+.s1 { left: 797px; top: 996px; }
+.s2 { left: 530px; top: 1166px; }
+.y { left: 987px; top: 1384px; }
+
+/* hover시 슬라이드 */
+.glossy-word span {
+  transition: transform 1.2s cubic-bezier(0.25, 1, 0.3, 1);
+}
+.g:hover  { transform: translateX(-1000px); }
+.l:hover  { transform: translateX(600px); }
+.o:hover  { transform: translateX(600px); }
+.s1:hover { transform: translateX(-600px); }
+.s2:hover { transform: translateX(600px); }
+.y:hover  { transform: translateX(-1000px); }

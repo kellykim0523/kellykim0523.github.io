@@ -1,0 +1,52 @@
+/* 전체 레이아웃 */
+body{
+  font-family: "Poppins", sans-serif;
+  background: #0AF;
+  margin: 0;
+  box-sizing: border-box
+}
+
+/* 단어 전체 */
+.gummy-word {
+  display: flex;
+  gap: 18px;
+  flex-shrink: 0;
+  width: 380px;
+  height: 236px;
+}
+
+/* 글자 기본 스타일 */
+.gummy-word span {
+  color: #FD0;
+  text-align: center;
+  font-family: "Climate Crisis";
+  font-size: 400px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 101.013%;
+  position: absolute;
+}
+
+/* 개별 색상 및 위치 */
+.g { left: 353px;  top: 95px; }
+.u { left: 1004px; top: 331px; }
+.m1 { left: 108px; top: 764px; }
+.m2 { left: 443px; top: 1298px; }
+.y { left: 1004px; top: 1298px; }
+
+/* 통통 애니메이션 프레임 */
+@keyframes gummyBounce {
+  0%   { transform: scale(1) translateY(0); }
+  30%  { transform: scale(1.4, 0.8) translateY(-20px); }
+  50%  { transform: scale(0.9, 1.1) translateY(10px); }
+  70%  { transform: scale(1.15, 0.9) translateY(-10px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+/* hover 시 통통 */
+.gummy-word span:hover {
+  animation: gummyBounce 0.5s cubic-bezier(0.33, 1.6, 0.66, 1);
+  color: #f6ff00;
+  filter: drop-shadow(0 0 40px #f6ff00);
+}
+

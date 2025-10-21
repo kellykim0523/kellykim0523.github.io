@@ -1,0 +1,30 @@
+/* 전체 레이아웃 */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #BF00FF;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 글자 기본 스타일 */
+.fluffy-word {
+  color: #FFFFFF;
+  font-family: "Climate Crisis", sans-serif;
+  font-size: 400px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  position: relative;
+  transition: transform 2s ease-in-out;
+  transform-origin: center;
+}
+
+/* hover시 팽창 */
+.fluffy-word:hover {
+  transform: scale(2.5);
+}

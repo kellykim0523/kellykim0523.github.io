@@ -1,40 +1,36 @@
-/* 전체 레이아웃 */
-body{
+/* 기본 설정 */
+body {
   font-family: "Poppins", sans-serif;
-  background: #0AF;
+  background: #F8F9FA;
+  color: #111;
   margin: 0;
-  box-sizing: border-box
+  padding: 100px 80px;
+  box-sizing: border-box;
 }
 
-/* 단어 전체 */
+/* 타이틀 단어 영역 */
 .gummy-word {
-  display: flex;
-  gap: 18px;
-  flex-shrink: 0;
-  width: 380px;
-  height: 236px;
-}
-
-/* 글자 기본 스타일 */
-.gummy-word span {
-  color: #FD0;
+  display: inline-flex; 
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;             
+  width: 100%;
   text-align: center;
-  font-family: "Climate Crisis";
-  font-size: 400px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 101.013%;
-  position: absolute;
+  margin: 0 auto;
 }
 
-/* 개별 색상 및 위치 */
-.g { left: 353px;  top: 95px; }
-.u { left: 1004px; top: 331px; }
-.m1 { left: 108px; top: 764px; }
-.m2 { left: 443px; top: 1298px; }
-.y { left: 1004px; top: 1298px; }
+/* 글자 스타일 */
+.gummy-word span {
+  font-family: "Climate Crisis";
+  font-size: 220px;
+  font-weight: 400;
+  line-height: 0.9;
+  color: #0AF;
+  letter-spacing: -3px;
+  transition: color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
 
-/* 통통 애니메이션 프레임 */
+/* 통통 튀는 애니메이션 */
 @keyframes gummyBounce {
   0%   { transform: scale(1) translateY(0); }
   30%  { transform: scale(1.4, 0.8) translateY(-20px); }
@@ -43,10 +39,61 @@ body{
   100% { transform: scale(1) translateY(0); }
 }
 
-/* hover 시 통통 */
+/* hover 통통 효과 + 색상 변화 */
 .gummy-word span:hover {
   animation: gummyBounce 0.5s cubic-bezier(0.33, 1.6, 0.66, 1);
   color: #f6ff00;
   filter: drop-shadow(0 0 40px #f6ff00);
 }
 
+/* 인트로 문장 */
+.intro {
+  font-family: "ITC Avant Garde Gothic Pro", sans-serif;
+  font-size: 22px;
+  color: #444;
+  line-height: 150%;
+  max-width: 600px;
+  margin: 40px auto 120px;
+  text-align: center;
+}
+
+/* 본문 섹션 */
+.text-block {
+  max-width: 720px;
+  margin: 0 auto 160px;
+  padding: 0 24px;
+}
+
+.text-block h2 {
+  font-family: "ITC Avant Garde Gothic Pro", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.text-block p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 170%;
+  color: #333;
+  margin-bottom: 24px;
+  letter-spacing: -0.2px;
+}
+
+/* 캡션 */
+.caption {
+  font-size: 14px;
+  color: #888;
+  margin-top: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+/* Hero 구분선 */
+.hero {
+  margin-bottom: 160px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 80px;
+}

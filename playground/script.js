@@ -31,3 +31,8 @@ document.addEventListener("mousemove", (event) => {
 
     document.body.appendChild(dot);
 });
+
+function goNext() {
+    window.location.href = "../collect/index.html";
+}
+

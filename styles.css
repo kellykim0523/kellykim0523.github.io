@@ -57,7 +57,7 @@ p.sub{
 
 /* hover시 그림자+글자색+살짝 커짐 */
 .ball:hover {
-  box-shadow: 0 0 50px rgb(255, 0, 119);
+  box-shadow: 0 0 50px rgb(0, 204, 255);
   color: rgb(246, 255, 0);
   transform: scale(1.05);
 }

@@ -1,43 +1,33 @@
-/* 기본 구조 */
-* {
-  margin: 0;
-  padding: 0;
+
+body.rigid-page {
+  font-family: "ITC Avant Garde Gothic Pro", sans-serif;
+  background: #ececec;
+  margin: 0 auto;
+  padding: 62px 0 0 0;
+  width: 1440px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 70px;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "ITC Avant Garde Gothic Pro";
-  background: #fafafa;
-  color: #111;
-  line-height: 1.6;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-/* 타이틀 섹션 */
-.intro {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  position: relative;
-  overflow: hidden;
-}
-
-h1 {
-  font-family: "Climate Crisis", sans-serif;
-  font-size: 200px;
+.rigid-word {
+  font-family: "Climate Crisis";
+  font-size: 210px;
   font-weight: 400;
   color: #000;
-  letter-spacing: 2px;
   position: relative;
-  overflow: hidden;
+  text-align: center;
   line-height: 1;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-h1::after {
+
+.rigid-word::after {
   content: "Rigid";
   position: absolute;
   left: 0;
@@ -50,104 +40,16 @@ h1::after {
   transition: width 0.8s ease;
 }
 
-h1:hover::after {
+.rigid-word:hover::after {
   width: 100%;
 }
 
-.sub {
-  font-family: "ITC Avant Garde Gothic Pro", sans-serif;
-  color: #f0a;
-  font-size: 28px;
-  font-weight: 500;
-  margin-top: 20px;
-  letter-spacing: -1.5px;
-  transition: transform 0.6s ease;
-}
 
-.sub:hover {
-  transform: translateY(-6px);
-}
-
-/* 본문 섹션  */
-.textblock {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 10vw;
-  transition: background 1s ease;
-}
-
-.textblock p {
-  max-width: 800px;
+.text-block {
+  max-width: 760px;
+  text-align: center;
+  line-height: 180%;
   font-size: 22px;
-  font-weight: 400;
-  margin-bottom: 1.8rem;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Hover 효과 */
-.textblock p::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0%;
-  height: 100%;
-  background: #f0a;
-  z-index: -1;
-  transition: width 0.6s ease;
-}
-
-.textblock p:hover::before {
-  width: 100%;
-}
-
-.textblock p:hover {
-  color: #00b3ff;
-  transition: color 0.6s ease;
-}
-
-/*  섹션 색상*/
-.white {
-  background: #ffffff;
-  color: #000;
-}
-
-.gray {
-  background: #f2f2f2;
+  letter-spacing: -0.3px;
   color: #111;
-}
-
-.black {
-  background: #000;
-  color: #ffffff;
-}
-
-.black p::before {
-  background: #ff0;
-}
-
-/* 애니메이션  */
-@keyframes rise {
-  from { transform: translateY(40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-.textblock p {
-  animation: rise 1s ease forwards;
-}
-.textblock p:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-/* 반응형 */
-@media (max-width: 1024px) {
-  h1 {
-    font-size: 120px;
-  }
-  .textblock p {
-    font-size: 18px;
-  }
 }

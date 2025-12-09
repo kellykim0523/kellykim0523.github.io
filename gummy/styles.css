@@ -1,36 +1,35 @@
-/* 기본 설정 */
+
 body {
-  font-family: "Poppins", sans-serif;
-  background: #F8F9FA;
-  color: #111;
-  margin: 0;
-  padding: 100px 80px;
+  font-family: "ITC Avant Garde Gothic Pro", sans-serif;
+  background: #000000;
+  margin: 0 auto;
+  padding: 62px 0 0 0;
+  width: 1440px;
+  font-weight: 430;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 70px; 
   box-sizing: border-box;
 }
 
-/* 타이틀 단어 영역 */
 .gummy-word {
-  display: inline-flex; 
+  display: inline-flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 0;             
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
+  gap: 0;
 }
 
-/* 글자 스타일 */
 .gummy-word span {
   font-family: "Climate Crisis";
-  font-size: 220px;
-  font-weight: 400;
+  font-size: 210px;
+  font-weight: 500;
   line-height: 0.9;
-  color: #0AF;
-  letter-spacing: -3px;
+  color: #38A1FF;
   transition: color 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
 
-/* 통통 튀는 애니메이션 */
 @keyframes gummyBounce {
   0%   { transform: scale(1) translateY(0); }
   30%  { transform: scale(1.4, 0.8) translateY(-20px); }
@@ -39,61 +38,18 @@ body {
   100% { transform: scale(1) translateY(0); }
 }
 
-/* hover 통통 효과 + 색상 변화 */
 .gummy-word span:hover {
   animation: gummyBounce 0.5s cubic-bezier(0.33, 1.6, 0.66, 1);
   color: #f6ff00;
-  filter: drop-shadow(0 0 40px #f6ff00);
+  filter: drop-shadow(0 0 35px #f6ff00);
 }
 
-/* 인트로 문장 */
-.intro {
-  font-family: "ITC Avant Garde Gothic Pro", sans-serif;
-  font-size: 22px;
-  color: #444;
-  line-height: 150%;
-  max-width: 600px;
-  margin: 40px auto 120px;
-  text-align: center;
-}
 
-/* 본문 섹션 */
 .text-block {
-  max-width: 720px;
-  margin: 0 auto 160px;
-  padding: 0 24px;
-}
-
-.text-block h2 {
-  font-family: "ITC Avant Garde Gothic Pro", sans-serif;
-  font-weight: 600;
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: #000;
-}
-
-.text-block p {
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  line-height: 170%;
-  color: #333;
-  margin-bottom: 24px;
-  letter-spacing: -0.2px;
-}
-
-/* 캡션 */
-.caption {
-  font-size: 14px;
-  color: #888;
-  margin-top: 60px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: right;
-}
-
-/* Hero 구분선 */
-.hero {
-  margin-bottom: 160px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 80px;
+  max-width: 760px;
+  text-align: center;
+  line-height: 180%;
+  font-size: 22px;
+  letter-spacing: -0.3px;
+  color: #ffffff;
 }
